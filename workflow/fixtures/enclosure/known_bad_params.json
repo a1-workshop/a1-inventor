@@ -1,0 +1,35 @@
+{
+  "fixture": "enclosure.known_bad",
+  "expected_gate": "Gate_Enclosure",
+  "expected_status": "FAIL",
+  "notes": "Cavity smaller than board; opening misaligned; wall too thin; over envelope.",
+  "pcb": {
+    "width_mm": 55.0,
+    "height_mm": 35.0,
+    "stackup_z_mm": 8.0
+  },
+  "requirements": {
+    "envelope_mm": [80.0, 55.0, 25.0],
+    "xy_clearance_mm": 1.0,
+    "z_clearance_mm": 1.5,
+    "opening_tolerance_mm": 0.5,
+    "min_wall_mm": 2.0
+  },
+  "enclosure": {
+    "outer_mm": [90.0, 60.0, 30.0],
+    "wall_mm": 1.0,
+    "cavity_mm": [54.0, 34.0, 8.0],
+    "openings": [
+      { "id": "USB", "pcb_xy_mm": [10.0, 5.0], "opening_xy_mm": [12.0, 8.0] },
+      { "id": "SENSOR", "pcb_xy_mm": [40.0, 20.0], "opening_xy_mm": [40.0, 20.0] }
+    ],
+    "exports": { "stl": false, "dxf": false }
+  },
+  "expected_checks": {
+    "cavity_clearance": "FAIL",
+    "openings_align": "FAIL",
+    "wall_thickness": "FAIL",
+    "envelope": "FAIL",
+    "fab_export": "FAIL"
+  }
+}

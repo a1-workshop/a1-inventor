@@ -1,0 +1,36 @@
+{
+  "fixture": "pcb.known_good",
+  "expected_gate": "Gate_PCB",
+  "expected_status": "PASS",
+  "board": {
+    "width_mm": 55.0,
+    "height_mm": 35.0,
+    "max_width_mm": 60.0,
+    "max_height_mm": 40.0
+  },
+  "drc": {
+    "error_count": 0,
+    "waivers": []
+  },
+  "keepouts": {
+    "violations": 0
+  },
+  "bom": {
+    "critical_parts_present": ["SENSOR_TEMP_HUM", "REG_3V3", "CONN_DEBUG"],
+    "schematic_symbol_count": 24,
+    "bom_row_count": 24
+  },
+  "fab_set": {
+    "gerbers": true,
+    "drill": true,
+    "bom": true,
+    "cpl": true
+  },
+  "expected_checks": {
+    "drc_clean": "PASS",
+    "outline": "PASS",
+    "keepouts": "PASS",
+    "bom_complete": "PASS",
+    "fab_set": "PASS"
+  }
+}

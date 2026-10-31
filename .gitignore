@@ -1,0 +1,35 @@
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# Editors / IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Student / local working copies (do not commit personal lab work)
+my-work/
+**/my-work/
+
+# Local scratch / exported PDFs and binaries under tmp
+tmp/
+*.pdf
+
+# Logs and local harness state (when tooling lands)
+*.log
+state.json
+audit_log.jsonl
+!student/**/templates/audit_log.jsonl

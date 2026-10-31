@@ -1,0 +1,28 @@
+{
+  "fixture": "system.report.schema.stub",
+  "expected_gate": "Gate_System",
+  "status": "stub",
+  "notes": "Expected shape for system_test_report until HIL harness exists.",
+  "required_fields": [
+    "suite_exit_code",
+    "ranges_covered",
+    "accuracy_summary",
+    "gate_refs"
+  ],
+  "example_pass": {
+    "suite_exit_code": 0,
+    "ranges_covered": { "temperature_c": [-10, 50], "humidity_rh_pct": [20, 80] },
+    "accuracy_summary": { "temp_error_max_c": 0.5, "humidity_error_max_rh_pct": 3.0 },
+    "gate_refs": {
+      "circuit": "Gate_Circuit_full:PASS",
+      "pcb": "Gate_PCB:PASS",
+      "enclosure": "Gate_Enclosure:PASS"
+    }
+  },
+  "example_fail": {
+    "suite_exit_code": 1,
+    "ranges_covered": { "temperature_c": [20, 25], "humidity_rh_pct": [40, 45] },
+    "accuracy_summary": { "temp_error_max_c": 5.0, "humidity_error_max_rh_pct": 15.0 },
+    "expected_fail_checks": ["suite_exit", "range_claims", "accuracy_claims"]
+  }
+}

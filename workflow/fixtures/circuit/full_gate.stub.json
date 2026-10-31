@@ -1,0 +1,19 @@
+{
+  "fixture": "circuit.full_gate.stub",
+  "expected_gate": "Gate_Circuit_full",
+  "status": "stub",
+  "notes": "Placeholder until NGSpice/netlist tooling is wired. Replace with known_good / known_bad sim metric files.",
+  "required_nets": ["VBAT", "3V3", "GND", "TEMP_SIG", "HUM_SIG"],
+  "thresholds": {
+    "rail_3v3_v": { "nom": 3.3, "tol_pct": 5.0 }
+  },
+  "known_good_placeholder": {
+    "sim_exit": 0,
+    "metrics": { "rail_3v3_v": 3.30, "temp_sig_vmax_v": 0.98 }
+  },
+  "known_bad_placeholder": {
+    "sim_exit": 0,
+    "metrics": { "rail_3v3_v": 2.90, "temp_sig_vmax_v": 1.40 },
+    "expected_fail_checks": ["dc_rails", "signal_limits"]
+  }
+}
