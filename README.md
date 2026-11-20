@@ -21,7 +21,7 @@ Repos are public. The learning boundary is **what students open**, not GitHub pr
 |----------|------------|
 | **Student** | [`student/README.md`](student/README.md) → [`student/start-here.md`](student/start-here.md) |
 | **Instructor / admin** | [`instructor/README.md`](instructor/README.md) |
-| **Approval / partnership** | [`proposal/README.md`](proposal/README.md) |
+| **Approval / partnership** | [`proposal/README.md`](proposal/README.md) · [Inventor web packet](https://a1-workshop.github.io/inventor/) · [org hub](https://a1-workshop.github.io) |
 | **Curriculum authors** | [`design/README.md`](design/README.md) |
 | **Org / multi-repo** | [`docs/org.md`](docs/org.md) |
 | **Shared definitions** | [`docs/`](docs/) · gates in [`workflow/`](workflow/) |

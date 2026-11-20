@@ -12,16 +12,20 @@ Repos under the org are **public** at this stage of development. Access control 
 
 ```text
 GitHub org: a1-workshop  (public)
-├── a1-inventor     # THIS repo — full source (instructor maintains; admin access)
-├── a1-student      # LATER — student pack extract (no answer keys)
+├── a1-workshop.github.io   # Org hub — multi-workshop brochure + Inventor packet under /inventor/
+├── a1-inventor             # THIS repo — full Inventor source (instructor maintains; admin access)
+├── almost-open             # How To Make (almost) Anything, Open — own Eleventy Pages
+├── a1-student              # LATER — Inventor student pack extract (no answer keys)
 └── (future workshops…)
 ```
 
 | Repo | Role |
 |------|------|
-| **`a1-inventor`** (this project) | Canonical full curriculum: student materials, instructor guides, answer keys, design/authoring, proposal, workflow SSOT. Instructor maintains; administration gets full access. |
-| **`a1-student`** (future) | Curated extract for learners. No answer keys, no spoiler-heavy facilitator notes, no `design/` authoring internals. |
-| Future workshop repos | Additional courses under the same org, same spoiler pattern. |
+| **`a1-workshop.github.io`** | Org root GitHub Pages hub ([https://a1-workshop.github.io](https://a1-workshop.github.io)): workshop index. Inventor proposal + `Gate_Circuit_lite` live under [`/inventor/`](https://a1-workshop.github.io/inventor/). Does not vendor other courses’ curriculum trees. |
+| **`a1-inventor`** (this project) | Canonical full Inventor curriculum: student materials, instructor guides, answer keys, design/authoring, proposal, workflow SSOT. Instructor maintains; administration gets full access. |
+| **`almost-open`** | Open FOSS-first maker course (weeks 1–15). Own repo and project Pages at [https://a1-workshop.github.io/almost-open/](https://a1-workshop.github.io/almost-open/). |
+| **`a1-student`** (future) | Curated Inventor extract for learners. No answer keys, no spoiler-heavy facilitator notes, no `design/` authoring internals. |
+| Future workshop repos | Additional courses under the same org; hub lists them without merging repos. |
 
 Local working directory may still be named `ai-inventor` until renamed; the GitHub remote name should be **`a1-inventor`**.
 
@@ -58,4 +62,6 @@ Program materials and delivery: **A1 Workshop**, in partnership with **Humanmade
 
 - Authoring / publish rules: [`../design/AUTHORING.md`](../design/AUTHORING.md)
 - Proposal status: [`../proposal/README.md`](../proposal/README.md)
+- Org hub: [https://a1-workshop.github.io](https://a1-workshop.github.io)
+- Inventor web packet: [https://a1-workshop.github.io/inventor/](https://a1-workshop.github.io/inventor/)
 - Repo map: [`../README.md`](../README.md)

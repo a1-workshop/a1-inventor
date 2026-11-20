@@ -7,6 +7,7 @@ Formal program proposal for the AI-Powered Inventor course family. The program i
 ## Document
 
 - [`AI-Powered-Inventor.md`](AI-Powered-Inventor.md) — approval-facing proposal (overview, objectives, week spine, outcomes)
+- **Web packet:** [a1-workshop.github.io/inventor/](https://a1-workshop.github.io/inventor/) — admin-facing Inventor landing plus interactive `Gate_Circuit_lite` demo (org hub root lists all workshops)
 
 ## Locked for this draft
 
