@@ -5,7 +5,7 @@
 **Live site:** [https://a1-workshop.github.io/a1-inventor/](https://a1-workshop.github.io/a1-inventor/)  
 **Org hub:** [https://a1-workshop.github.io](https://a1-workshop.github.io)
 
-License: [MIT](LICENSE). Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md).
+License: [MIT](LICENSE). Contributing: [`CONTRIBUTING.md`](CONTRIBUTING.md). Authors/agents: [`AGENTS.md`](AGENTS.md).
 
 ## Open course
 

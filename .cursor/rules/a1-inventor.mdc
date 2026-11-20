@@ -1,0 +1,39 @@
+---
+description: Authoring rules for the AI-Powered Inventor open course
+globs:
+  - course/**/*.md
+  - site/**/*
+  - README.md
+alwaysApply: false
+---
+
+# a1-inventor authoring
+
+Standing repo law: [`AGENTS.md`](../../AGENTS.md). Keep agent policy out of generated site pages and lesson chrome.
+
+## Open course
+
+- Public curriculum lives under `course/`. Anyone may read everything there.
+- Do **not** reintroduce instructor-only or spoiler-gated trees.
+- Student agent packs: `course/agents/` (build-ignored). Cursor config is `AGENTS.md` / `.cursor/rules/` only.
+
+## Weeks
+
+- Spine is **weeks 1–15**. Permalinks `/weeks/NN/`.
+- Week frontmatter: `title`, `shortTitle`, `week`, `time`, `goal` (quote `goal` when it contains `:`).
+- Full weeks: framing paragraph + topic H2s + `## Done when` + `Next:` link.
+- Stubs: `**Status:** stub`, `## Steps`, `## Done when`, `Next:` link.
+- Weeks sidebar (`week-nav.njk`): `<ol>` markers only — link text is `shortTitle`, not `N. shortTitle`.
+
+## Site
+
+- Eleventy from `course/**/*.md`; pathPrefix `/a1-inventor/`.
+- Keep the reading-first light theme shared with almost-open / hub.
+- Do not hand-mirror lessons into HTML.
+- Gate demo under `site/lab/`; hub redirects to the course Pages URL.
+
+## Adding or editing a week
+
+1. Edit `course/weeks/NN-slug.md` with the frontmatter contract above.
+2. Link it from `course/index.md` and `course/weeks/index.md`.
+3. Keep `workflow/` gate contracts in sync when week → gate mapping changes.

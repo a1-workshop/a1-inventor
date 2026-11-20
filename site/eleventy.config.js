@@ -26,9 +26,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("node_modules/**");
   eleventyConfig.ignores.add("site/**");
   eleventyConfig.ignores.add("README.md");
+  eleventyConfig.ignores.add("AGENTS.md");
   eleventyConfig.ignores.add("CONTRIBUTING.md");
   eleventyConfig.ignores.add("LICENSE");
   eleventyConfig.ignores.add(".github/**");
+  eleventyConfig.ignores.add(".cursor/**");
   eleventyConfig.ignores.add("docs/**");
   eleventyConfig.ignores.add("workflow/**");
   eleventyConfig.ignores.add("tmp/**");
