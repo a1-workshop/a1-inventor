@@ -612,8 +612,8 @@ a:hover {
 }
 
 .week-nav {
-  list-style: none;
-  padding: 0;
+  list-style: decimal;
+  padding: 0 0 0 1.35rem;
   margin: 0;
 }
 
