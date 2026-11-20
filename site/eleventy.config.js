@@ -8,17 +8,12 @@ function courseRel(inputPath) {
 
 function permalinkFor(rel) {
   if (rel === "course/index.md") return "/";
-  if (rel === "course/start-here.md") return "/start-here/";
   if (rel === "course/overview.md") return "/overview/";
-  if (rel === "course/track-a/overview.md") return "/track-a/overview/";
-  if (rel.startsWith("course/track-a/exercises/")) {
-    return `/track-a/exercises/${path.basename(rel, ".md")}/`;
-  }
+  if (rel === "course/weeks/index.md") return "/weeks/";
+  const week = rel.match(/^course\/weeks\/(\d{2})-/);
+  if (week) return `/weeks/${week[1]}/`;
   if (rel.startsWith("course/docs/")) {
     return `/docs/${path.basename(rel, ".md")}/`;
-  }
-  if (rel.startsWith("course/track-")) {
-    return `/${rel.slice("course/".length).replace(/\.md$/, "")}/`;
   }
   if (rel.startsWith("course/")) {
     return `/${rel.slice("course/".length).replace(/\.md$/, "")}/`;
@@ -42,13 +37,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.ignores.add("course/**/templates/**");
   eleventyConfig.ignores.add("course/**/agents/**");
   eleventyConfig.ignores.add("course/README.md");
-  eleventyConfig.ignores.add("course/track-b/**");
-  eleventyConfig.ignores.add("course/track-c/**");
 
   eleventyConfig.addPassthroughCopy({
     "site/assets": "assets",
     "site/lab": "lab",
   });
+
+  eleventyConfig.addCollection("weeks", (collectionApi) =>
+    collectionApi
+      .getFilteredByGlob("./course/weeks/!(index).md")
+      .sort((a, b) => (a.data.week || 0) - (b.data.week || 0))
+  );
 
   eleventyConfig.addCollection("course", (collectionApi) =>
     collectionApi

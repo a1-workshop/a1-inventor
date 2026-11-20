@@ -17,11 +17,11 @@ Validators are **deterministic checkers with no LLM in the loop**. The agent pro
 | `metrics` | Numeric values recomputed by the validator |
 | `waivers` | Explicit human-approved exceptions (empty by default; non-empty requires audit entry) |
 
-On `FAIL`, the harness feeds `checks[].detail` back to the agent. Max iterations (Track A default: 5) then escalate to human review.
+On `FAIL`, the harness feeds `checks[].detail` back to the agent. Max iterations (week 1 default: 5) then escalate to human review.
 
 ---
 
-## Gate_Circuit_lite — Track A
+## Gate_Circuit_lite
 
 **Purpose:** Validate resistor-divider / signal-conditioning math for the environmental monitor front-end.
 
@@ -53,7 +53,7 @@ On `FAIL`, the harness feeds `checks[].detail` back to the agent. Max iterations
 
 ---
 
-## Gate_Circuit_full — Track B/C
+## Gate_Circuit_full
 
 **Purpose:** Simulation-backed verification of the sensor-interface circuit.
 
@@ -133,7 +133,7 @@ Implementation note: metrics comparison is numeric thresholding in a script (Pyt
 
 ---
 
-## Gate_System — Track C
+## Gate_System
 
 **Purpose:** Automated / HIL validation that measured behavior matches requirements claims.
 
@@ -159,7 +159,7 @@ Implementation note: metrics comparison is numeric thresholding in a script (Pyt
 
 ## Proving the pipeline (fixture battery)
 
-Before a workshop or Track B/C cohort, run validators against fixtures only (no agent):
+Before a workshop cohort, run validators against fixtures only (no agent):
 
 1. Golden requirements load without error — [`fixtures/requirements.golden.md`](fixtures/requirements.golden.md)
 2. Circuit lite: known_good → PASS; known_bad → FAIL with expected check ids

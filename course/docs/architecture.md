@@ -1,6 +1,8 @@
-# Architecture
+---
+title: Architecture
+---
 
-Canonical agentic engineering loop (all tracks):
+Canonical agentic engineering loop (all weeks):
 
 ```text
 Requirements
@@ -50,8 +52,8 @@ Human Review
 |-----------|----------------|
 | **Agent** | Reads requirements, decomposes tasks, calls tools, revises on validation failure |
 | **Harness** | State, tool allow-list, execution, audit log, max-iteration limits |
-| **Tools** | Allow-listed only; escalate by track |
-| **Validation** | Deterministic checkers — [`../workflow/validators.md`](../workflow/validators.md) |
+| **Tools** | Allow-listed only; escalate by week/stage |
+| **Validation** | Deterministic checkers — [`../../workflow/validators.md`](../../workflow/validators.md) |
 | **Human Review** | Approve/reject; reason in audit log; blocks `RELEASED` |
 
 Agents may vary. **Gates do not.** A workflow passes when artifacts clear the stage gate without hand-editing validator math, and human review is recorded.

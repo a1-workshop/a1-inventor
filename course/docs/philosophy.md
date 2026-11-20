@@ -1,4 +1,6 @@
-# Philosophy
+---
+title: Philosophy
+---
 
 This program teaches engineers to design **agentic engineering workflows**: systems where an LLM reasons, calls tools, produces artifacts, and is held to **deterministic validation** and **human sign-off**.
 
@@ -16,7 +18,7 @@ not merely:
 Engineer → Tool → Product
 ```
 
-**Terms (Track A foundation):**
+**Terms (week 1 foundation):**
 
 | Term | Meaning |
 |------|---------|

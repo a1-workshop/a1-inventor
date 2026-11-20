@@ -4,22 +4,38 @@ bodyClass: doc-page
 ---
 <main class="doc">
   <div class="wrap doc__layout">
-    <nav class="doc__side" aria-label="Course">
-      <p class="doc__side-label">Course</p>
-      <ol class="week-nav">
-        <li><a href="{{ '/start-here/' | url }}">Start here</a></li>
-        <li><a href="{{ '/overview/' | url }}">Overview</a></li>
-        <li><a href="{{ '/track-a/overview/' | url }}">Track A</a></li>
-        <li><a href="{{ '/docs/tracks/' | url }}">Track ladder</a></li>
-        <li><a href="{{ '/lab/gate-lite.html' | url }}">Gate demo</a></li>
-      </ol>
-    </nav>
+    {% include "week-nav.njk" %}
     <div class="doc__main">
       <h1 class="doc__title">{{ title }}</h1>
       {% if lead %}<p class="doc__lead">{{ lead }}</p>{% endif %}
+      {% if time or goal %}
+      <p class="meta-row">
+        {% if time %}<strong>Time:</strong> {{ time }}{% endif %}
+        {% if time and goal %} · {% endif %}
+        {% if goal %}<strong>Goal:</strong> {{ goal }}{% endif %}
+      </p>
+      {% endif %}
       <div class="prose">
         {{ content | safe }}
       </div>
+      {% if week %}
+      <nav class="pager" aria-label="Adjacent weeks">
+        <div>
+          {% for w in collections.weeks %}
+            {% if w.data.week == week and not loop.first %}
+              <a href="{{ collections.weeks[loop.index0 - 1].url | url }}">← Week {{ collections.weeks[loop.index0 - 1].data.week }}</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div>
+          {% for w in collections.weeks %}
+            {% if w.data.week == week and not loop.last %}
+              <a href="{{ collections.weeks[loop.index0 + 1].url | url }}">Week {{ collections.weeks[loop.index0 + 1].data.week }} →</a>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </nav>
+      {% endif %}
     </div>
   </div>
 </main>

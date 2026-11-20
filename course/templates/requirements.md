@@ -1,4 +1,4 @@
-# Requirements — Environmental Monitor front-end (Track A)
+# Requirements — Environmental Monitor front-end (week 1)
 
 ## Electrical
 

@@ -1,4 +1,4 @@
-# Allow-listed tools (Track A)
+# Allow-listed tools (week 1 / circuit-lite)
 
 The agent may request only these tools. The human (or a future harness) executes them and returns results.
 

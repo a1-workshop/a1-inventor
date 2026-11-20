@@ -1,9 +1,9 @@
 # Environmental Monitor — Golden Requirements
 
 **Product:** Portable, battery-powered environmental monitor (temperature + humidity).
-**Through-line stages:** Circuit → PCB → Enclosure → System (Track C).
+**Through-line stages:** Circuit → PCB → Enclosure → System.
 
-These requirements are the shared contract across Tracks A, B, and C. Track A validates a software-verifiable subset (signal conditioning into the ADC). Tracks B and C realize the same product with simulation, PCB, and mechanical packaging.
+These requirements are the shared contract across the fifteen-week spine. Week 1 validates a software-verifiable subset (signal conditioning into the ADC). Later weeks realize the same product with simulation, PCB, and mechanical packaging.
 
 ---
 
@@ -20,7 +20,7 @@ These requirements are the shared contract across Tracks A, B, and C. Track A va
 
 | ID | Requirement | Gate |
 |----|-------------|------|
-| E-1 | Sensor-side signal span treated as **0–3.3 V** for conditioning math (Track A lite model) | Circuit lite / full |
+| E-1 | Sensor-side signal span treated as **0–3.3 V** for conditioning math (week 1 lite model) | Circuit lite / full |
 | E-2 | ADC input window **0–1.0 V** | Circuit lite / full |
 | E-3 | Conditioned output accuracy **±2%** of full scale at DC corners (worst-case resistor tolerance included for lite) | Circuit lite / full |
 | E-4 | Output impedance of analog front-end **&lt; 10 kΩ** | Circuit lite |
@@ -48,7 +48,7 @@ These requirements are the shared contract across Tracks A, B, and C. Track A va
 | M-4 | Minimum wall thickness **2.0 mm** (FDM baseline) | Enclosure |
 | M-5 | Export STL (and/or DXF for panels) for fabrication | Enclosure |
 
-## 5. System (Track C)
+## 5. System
 
 | ID | Requirement | Gate |
 |----|-------------|------|

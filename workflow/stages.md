@@ -4,7 +4,7 @@
 
 **Course entry:** [`../course/`](../course/) · Product summary → [`../course/docs/product.md`](../course/docs/product.md)
 
-**Canonical loop (all tracks):**
+**Canonical loop (all weeks):**
 
 ```text
 Requirements → Agent → Harness → Tools → Deterministic Validator → Human Review → Next stage
@@ -16,20 +16,22 @@ A stage is complete only when its **gate** passes *and* a human review decision 
 
 ---
 
-## Stage map by track
+## Stage map by week
 
-| Stage | Gate | Track A | Track B | Track C |
-|-------|------|---------|---------|---------|
-| Circuit (lite) | `Gate_Circuit_lite` | Required | Prerequisite | Prerequisite |
-| Circuit (full) | `Gate_Circuit_full` | — | Weeks B1–B2 | Weeks 3–4 |
-| PCB | `Gate_PCB` | — | Week B3 | Week 5 |
-| Enclosure | `Gate_Enclosure` | — | Week B4 | Weeks 6–7 |
-| System | `Gate_System` | — | — | Weeks 8–9 |
-| Capstone release | All gates green + presentation | — | — | Week 10 |
+| Stage | Gate | Weeks |
+|-------|------|-------|
+| Circuit (lite) | `Gate_Circuit_lite` | 1 |
+| Circuit (full) | `Gate_Circuit_full` | 2–3 |
+| PCB | `Gate_PCB` | 4 |
+| Enclosure | `Gate_Enclosure` | 5 |
+| Firmware / data path | (prep) | 6–7 |
+| System / HIL | `Gate_System` | 8–9 |
+| Packaging, docs, freeze, polish | (supporting) | 10–14 |
+| Capstone release | All gates green + presentation | 15 |
 
 ---
 
-## 1. Circuit (lite) — Track A
+## 1. Circuit (lite) — Week 1
 
 **Engineering target:** Software-verifiable signal conditioning that scales a sensor output into an ADC input range (resistor divider / front-end math). No KiCad, NGSpice, or FreeCAD required.
 
@@ -47,14 +49,14 @@ A stage is complete only when its **gate** passes *and* a human review decision 
 | `audit_log.jsonl` | Tool calls, iterations, human decision |
 
 ### Gate
-`Gate_Circuit_lite` — see [`validators.md`](validators.md#gate_circuit_lite--track-a)
+`Gate_Circuit_lite` — see [`validators.md`](validators.md#gate_circuit_lite)
 
 ### Human review checkpoint
 Engineer reviews `design.json` + `validation_report.md`; approve or reject with reason. Reject blocks release; agent may revise within max-iteration cap.
 
 ---
 
-## 2. Circuit (full) — Track B / C
+## 2. Circuit (full) — Weeks 2–3
 
 **Engineering target:** Complete sensor-interface circuit with simulation-backed verification (netlist → sim → metrics vs thresholds).
 
@@ -79,7 +81,7 @@ Engineer reviews sim report and topology; sign-off required before PCB layout be
 
 ---
 
-## 3. PCB — Track B / C
+## 3. PCB — Week 4
 
 **Engineering target:** Board that realizes the validated circuit, manufacturable under stated rules.
 
@@ -104,7 +106,7 @@ Engineer reviews DRC, outline, and fab outputs before enclosure fit work or fab 
 
 ---
 
-## 4. Enclosure — Track B / C
+## 4. Enclosure — Week 5
 
 **Engineering target:** Housing that fits the board, connectors, sensors, and battery; suitable for intended fabrication (print / cut / machine).
 
@@ -128,7 +130,7 @@ Engineer reviews fit report and manufacturability before fabrication package rel
 
 ---
 
-## 5. System — Track C
+## 5. System — Weeks 8–9
 
 **Engineering target:** Software + hardware-in-the-loop (or scripted device) validation that logged behavior meets requirements.
 
@@ -148,18 +150,18 @@ Engineer reviews fit report and manufacturability before fabrication package rel
 `Gate_System` — see [`validators.md`](validators.md#gate_system--track-c)
 
 ### Human review checkpoint
-Engineer signs off test report; required for Week 10 capstone release.
+Engineer signs off test report; required for week 15 capstone release.
 
 ---
 
 ## Stage transitions
 
 ```text
-Gate_Circuit_lite  ──(Track A complete)──►  Track B starts from same requirements
-Gate_Circuit_full  ──────────────────────►  PCB stage may begin
-Gate_PCB           ──────────────────────►  Enclosure stage may begin
-Gate_Enclosure     ──────────────────────►  Fab package / System integration
-Gate_System        ──────────────────────►  Capstone presentation / RELEASED
+Gate_Circuit_lite  ──(Week 1 complete)──►  Weeks 2–3 start from same requirements
+Gate_Circuit_full  ─────────────────────►  PCB stage may begin (week 4)
+Gate_PCB           ─────────────────────►  Enclosure stage may begin (week 5)
+Gate_Enclosure     ─────────────────────►  Fab package / System integration
+Gate_System        ─────────────────────►  Capstone presentation / RELEASED (week 15)
 ```
 
 No stage may mark artifacts `RELEASED` without: (1) gate pass, (2) human approve in audit log.

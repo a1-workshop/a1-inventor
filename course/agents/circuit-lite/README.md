@@ -1,6 +1,6 @@
 # Agent pack — circuit-lite
 
-Portable agent for Track A Environmental Monitor **signal conditioning** (resistor divider / front-end math).
+Portable agent for week-1 Environmental Monitor **signal conditioning** (resistor divider / front-end math).
 
 **Not Cursor-specific.** Paste these files into any LLM that supports a system prompt.
 

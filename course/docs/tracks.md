@@ -1,23 +1,21 @@
-# Track ladder
+---
+title: Week → gate map
+lead: How the fifteen weeks map onto shared gate contracts.
+---
 
-Three courses share one product through-line (Environmental Monitor) and the same gate architecture.
+One course spine. Stages unlock when their **gate** passes *and* a human review decision is recorded.
 
-```text
-Track A: Agentic Engineering Foundations (self-paced gateway)
-                ↓
-Track B: AI-Augmented Engineering (4 weeks)
-                ↓
-Track C: AI-Powered Inventor (10 weeks)
-```
+| Weeks | Stage | Gate |
+| --- | --- | --- |
+| 1 | Circuit (lite) — foundations | `Gate_Circuit_lite` |
+| 2–3 | Circuit (full) | `Gate_Circuit_full` |
+| 4 | PCB | `Gate_PCB` |
+| 5 | Enclosure | `Gate_Enclosure` |
+| 6–7 | Firmware / data path | (prep for system) |
+| 8–9 | System / HIL | `Gate_System` |
+| 10–14 | Packaging, docs, freeze, polish | (supporting) |
+| 15 | Presentation & release | All gates green + human Approve |
 
-| Track | Duration | Outcome |
-|-------|----------|---------|
-| **A** | ~3.5 h hands-on | Model vs assistant vs agent vs harness; `Gate_Circuit_lite` |
-| **B** | 4 weeks | Circuit (full) → PCB → enclosure with real tools and shared gates |
-| **C** | 10 weeks | Full invention package including software, HIL, and presentation |
+Canonical stage definitions: [`../../workflow/stages.md`](../../workflow/stages.md) · Validators: [`../../workflow/validators.md`](../../workflow/validators.md).
 
-Track A is the gateway. You need this mental model before later material feels like magic.
-
-- Entry: [`../start-here.md`](../start-here.md)
-- Program overview: [`../overview.md`](../overview.md)
-- Gates: [`../../workflow/stages.md`](../../workflow/stages.md)
+Start at [week 1](../weeks/01-foundations.md).

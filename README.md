@@ -15,7 +15,7 @@ Everything under [`course/`](course/) is for learners. There is no separate inst
 
 | Path | Role |
 |------|------|
-| **Learner** | [`course/index.md`](course/index.md) → [`course/start-here.md`](course/start-here.md) |
+| **Learner** | [`course/index.md`](course/index.md) → [`course/weeks/01-foundations.md`](course/weeks/01-foundations.md) |
 | **Org / repos** | [`docs/org.md`](docs/org.md) |
 | **Gates / fixtures** | [`workflow/`](workflow/) |
 
@@ -27,6 +27,6 @@ npm run dev    # local preview
 npm run build  # site/_site/
 ```
 
-## Tracks
+## Weeks
 
-See [`course/docs/tracks.md`](course/docs/tracks.md): Track A (gateway) → Track B (4 weeks) → Track C (10 weeks).
+Fifteen-week spine (week 1 ready; 2–15 stubbed). See [`course/weeks/`](course/weeks/) and the [week → gate map](course/docs/tracks.md).

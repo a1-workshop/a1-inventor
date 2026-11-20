@@ -1,7 +1,10 @@
-# AI-Powered Inventor — program overview
+---
+title: Program overview
+lead: Fifteen weeks. One product. Gates and human sign-off every stage.
+---
 
 **Program brand:** A1 Workshop  
-**Format:** Self-paced open course (Track A gateway ~3.5 h; Track B 4 weeks; Track C 10-week spine)  
+**Format:** Self-paced open course (15 weeks; week 1 ready, later weeks stubbed)  
 **Audience:** Advanced makers, engineers, entrepreneurs, researchers, and technical professionals  
 **Prerequisites:** Basic computer literacy; no prior AI experience required
 
@@ -46,4 +49,4 @@ The engineer remains responsible for judgment, creativity, safety, and validatio
 
 ## Start
 
-[Start here — Track A](start-here.md)
+[Week 1 — Agentic foundations](weeks/01-foundations.md) · [All weeks](weeks/index.md)
