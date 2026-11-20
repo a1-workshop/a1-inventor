@@ -2,7 +2,7 @@
 
 **Product through-line:** Battery-powered environmental monitor (temperature + humidity): analog front-end → PCB → enclosure → system validation.
 
-**Audience map:** Students → [`../student/`](../student/) · Instructors → [`../instructor/`](../instructor/) · Product summary → [`../docs/product.md`](../docs/product.md)
+**Course entry:** [`../course/`](../course/) · Product summary → [`../course/docs/product.md`](../course/docs/product.md)
 
 **Canonical loop (all tracks):**
 

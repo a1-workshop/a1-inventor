@@ -20,9 +20,13 @@ venv/
 .env.*
 !.env.example
 
-# Student / local working copies (do not commit personal lab work)
+# Local working copies (do not commit personal lab work)
 my-work/
 **/my-work/
+
+# Node / Eleventy
+node_modules/
+site/_site/
 
 # Local scratch / exported PDFs and binaries under tmp
 tmp/
@@ -32,4 +36,4 @@ tmp/
 *.log
 state.json
 audit_log.jsonl
-!student/**/templates/audit_log.jsonl
+!course/**/templates/audit_log.jsonl

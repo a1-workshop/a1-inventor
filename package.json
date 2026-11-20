@@ -1,0 +1,15 @@
+{
+  "name": "a1-inventor",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AI-Powered Inventor — open self-paced agentic engineering course",
+  "scripts": {
+    "build": "eleventy --config=site/eleventy.config.js",
+    "dev": "eleventy --config=site/eleventy.config.js --serve --port=8081",
+    "clean": "rm -rf site/_site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "markdown-it": "^14.1.0"
+  }
+}

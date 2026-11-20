@@ -1,0 +1,25 @@
+---
+layout: base.njk
+bodyClass: doc-page
+---
+<main class="doc">
+  <div class="wrap doc__layout">
+    <nav class="doc__side" aria-label="Course">
+      <p class="doc__side-label">Course</p>
+      <ol class="week-nav">
+        <li><a href="{{ '/start-here/' | url }}">Start here</a></li>
+        <li><a href="{{ '/overview/' | url }}">Overview</a></li>
+        <li><a href="{{ '/track-a/overview/' | url }}">Track A</a></li>
+        <li><a href="{{ '/docs/tracks/' | url }}">Track ladder</a></li>
+        <li><a href="{{ '/lab/gate-lite.html' | url }}">Gate demo</a></li>
+      </ol>
+    </nav>
+    <div class="doc__main">
+      <h1 class="doc__title">{{ title }}</h1>
+      {% if lead %}<p class="doc__lead">{{ lead }}</p>{% endif %}
+      <div class="prose">
+        {{ content | safe }}
+      </div>
+    </div>
+  </div>
+</main>
