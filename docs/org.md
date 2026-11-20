@@ -11,16 +11,16 @@ A1 Workshop is an **independent** program brand. Repos under the org are **publi
 ```text
 GitHub org: a1-workshop  (public)
 ├── a1-workshop.github.io   # Org hub — multi-workshop brochure
-├── a1-inventor             # THIS repo — open AI-Powered Inventor course
-├── almost-open             # How To Make (almost) Anything, Open
+├── a1-inventor             # THIS repo — open AI Driven Invention course
+├── almost-open             # How To Make (almost) Anything
 └── (future workshops…)
 ```
 
 | Repo | Role |
 |------|------|
 | **`a1-workshop.github.io`** | Org hub ([https://a1-workshop.github.io](https://a1-workshop.github.io)). |
-| **`a1-inventor`** (this project) | Open curriculum + Eleventy site for AI-Powered Inventor. All material is learner-facing. |
-| **`almost-open`** | Open FOSS-first maker course; project Pages at `/almost-open/`. |
+| **`a1-inventor`** (this project) | Open curriculum + Eleventy site for AI Driven Invention. All material is learner-facing. |
+| **`almost-open`** | How To Make (almost) Anything; project Pages at `/almost-open/`. |
 
 ## Related
 

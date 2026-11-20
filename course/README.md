@@ -1,6 +1,6 @@
 # Course materials
 
-Open, self-paced curriculum for **AI-Powered Inventor**. You do **not** need Cursor or any special IDE. Use:
+Open, self-paced curriculum for **AI Driven Invention**. You do **not** need Cursor or any special IDE. Use:
 
 1. These markdown files
 2. An LLM of your choice (ChatGPT, Claude, local model, etc.)

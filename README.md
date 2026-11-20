@@ -1,4 +1,4 @@
-# AI-Powered Inventor
+# AI Driven Invention
 
 **A1 Workshop** public repo **`a1-inventor`**: open, self-paced course on agentic engineering harnesses. Environmental Monitor through-line: circuit → PCB → enclosure → system.
 

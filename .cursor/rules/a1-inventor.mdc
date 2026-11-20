@@ -1,5 +1,5 @@
 ---
-description: Authoring rules for the AI-Powered Inventor open course
+description: Authoring rules for the AI Driven Invention open course
 globs:
   - course/**/*.md
   - site/**/*

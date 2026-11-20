@@ -10,7 +10,7 @@ lead: Fifteen weeks. One product. Gates and human sign-off every stage.
 
 ## Overview
 
-AI-Powered Inventor teaches you to use modern AI systems as engineering collaborators throughout the product development lifecycle — not prompt engineering for its own sake.
+AI Driven Invention teaches you to use modern AI systems as engineering collaborators throughout the product development lifecycle — not prompt engineering for its own sake.
 
 You build practical **engineering harnesses** that connect large language models to professional tools (CAD, circuit simulation, source control, manufacturing, hardware platforms), held to **deterministic validation** and **human sign-off**.
 

@@ -1,5 +1,5 @@
 ---
-title: AI-Powered Inventor
+title: AI Driven Invention
 lead: Open, self-paced agentic engineering — harnesses, gates, and human sign-off.
 layout: home.njk
 ---
